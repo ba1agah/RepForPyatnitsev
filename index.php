@@ -1,6 +1,6 @@
 <!doctype html>
 <head>
-    <title>Тест заголовка</title>
+    <title>Заголовок моей страницы по PHP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
@@ -34,10 +34,10 @@
 
 <div class="container">
     <?php if ($_SERVER['REQUEST_METHOD'] === 'GET') { ?>
-        <form action="form.php" method="post">
+        <form action="index.php" method="post">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Имя</label>
-                <input type="text" class="form-control" name="имя" id="exampleFormControlInput1" value="<?php echo $_POST['имя'] ?? '' ?>">
+                <input type="text" class="form-control" name="имя" id="exampleFormControlInput1" value="<?php echo $_POST['имя'] ?? '' ?>" placeholder="Имя">
             </div>
 
             <div class="mb-3">
@@ -57,8 +57,8 @@
 <div class="container">
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        echo '<b>firstname</b> = ' . ($_POST['firstname'] ?? '') . '<br>';
-        echo 'lastname = ' . ($_POST['lastname'] ?? '');
+        echo '<b>Имя</b> = ' . ($_POST['имя'] ?? '') . '<br>';
+        echo 'фамилия = ' . ($_POST['фамилия'] ?? '');
     }
     ?>
 </div>
